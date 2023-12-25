@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on Чт 18 мар 2021 16:53:52 by Eclipse SUMO netedit Version 1.8.0
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="osm.net.xml"/>
+    </input>
+
+    <output>
+        <output-file value="osm.net.xml"/>
+        <output.street-names value="true"/>
+    </output>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="false"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.5"/>
+        <rectangular-lane-cut value="false"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="false"/>
+    </pedestrian>
+
+    <report>
+        <aggregate-warnings value="5"/>
+    </report>
+
+</configuration>
+-->
+
+<net version="1.6" junctionCornerDetail="5" limitTurnSpeed="5.50" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/net_file.xsd">
+
+    <location netOffset="-395847.60,-6161832.33" convBoundary="42.64,170.13,962.95,1145.08" origBoundary="37.347322,55.591302,37.367801,55.602213" projParameter="+proj=utm +zone=37 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"/>
+
+    <type id="highway.bridleway" priority="1" numLanes="3" speed="2.78" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" oneway="1" width="2.00">
+        <laneType index="0"/>
+        <laneType index="1" speed="13.89"/>
+        <laneType index="2" speed="13.89"/>
+    </type>
+    <type id="highway.bus_guideway" priority="1" numLanes="1" speed="27.78" allow="bus" oneway="1"/>
+    <type id="highway.cycleway" priority="1" numLanes="1" speed="8.33" allow="bicycle" oneway="1" width="1.00"/>
+    <type id="highway.footway" priority="1" numLanes="1" speed="2.78" allow="pedestrian" oneway="1" width="2.00"/>
+    <type id="highway.ford" priority="1" numLanes="1" speed="2.78" allow="army" oneway="1"/>
+    <type id="highway.living_street" priority="2" numLanes="1" speed="2.78" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.motorway" priority="14" numLanes="2" speed="39.44" allow="private emergency authority army vip passenger hov taxi bus coach delivery truck trailer motorcycle evehicle custom1 custom2" oneway="1"/>
+    <type id="highway.motorway_link" priority="9" numLanes="1" speed="22.22" allow="private emergency authority army vip passenger hov taxi bus coach delivery truck trailer motorcycle evehicle custom1 custom2" oneway="1"/>
+    <type id="highway.path" priority="1" numLanes="1" speed="2.78" allow="pedestrian bicycle" oneway="1" width="2.00"/>
+    <type id="highway.pedestrian" priority="1" numLanes="1" speed="2.78" allow="pedestrian" oneway="1" width="2.00"/>
+    <type id="highway.primary" priority="12" numLanes="2" speed="27.78" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.primary_link" priority="7" numLanes="1" speed="22.22" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.raceway" priority="15" numLanes="2" speed="83.33" allow="vip" oneway="1"/>
+    <type id="highway.residential" priority="3" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.secondary" priority="11" numLanes="1" speed="27.78" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.secondary_link" priority="6" numLanes="1" speed="22.22" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.service" priority="1" numLanes="1" speed="5.56" allow="pedestrian delivery bicycle" oneway="1"/>
+    <type id="highway.stairs" priority="1" numLanes="1" speed="1.39" allow="pedestrian" oneway="1" width="2.00"/>
+    <type id="highway.step" priority="1" numLanes="1" speed="1.39" allow="pedestrian" oneway="1" width="2.00"/>
+    <type id="highway.steps" priority="1" numLanes="1" speed="1.39" allow="pedestrian" oneway="1" width="2.00"/>
+    <type id="highway.tertiary" priority="10" numLanes="1" speed="22.22" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.tertiary_link" priority="5" numLanes="1" speed="22.22" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.track" priority="1" numLanes="1" speed="5.56" allow="pedestrian motorcycle moped bicycle" oneway="1"/>
+    <type id="highway.trunk" priority="13" numLanes="2" speed="27.78" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.trunk_link" priority="8" numLanes="1" speed="22.22" disallow="pedestrian bicycle tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.unclassified" priority="4" numLanes="1" speed="13.89" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="highway.unsurfaced" priority="1" numLanes="1" speed="8.33" disallow="tram rail_urban rail rail_electric rail_fast ship" oneway="1"/>
+    <type id="railway.highspeed" priority="21" numLanes="1" speed="69.44" allow="rail_fast" oneway="1"/>
+    <type id="railway.light_rail" priority="19" numLanes="1" speed="27.78" allow="rail_urban" oneway="1"/>
+    <type id="railway.preserved" priority="16" numLanes="1" speed="27.78" allow="rail" oneway="1"/>
+    <type id="railway.rail" priority="20" numLanes="1" speed="44.44" allow="rail" oneway="1"/>
+    <type id="railway.subway" priority="18" numLanes="1" speed="27.78" allow="rail_urban" oneway="1"/>
+    <type id="railway.tram" priority="17" numLanes="1" speed="13.89" allow="tram" oneway="1"/>
+
+    <edge id=":atlasova_habarova_valuvskoe_0" function="internal">
+        <lane id=":atlasova_habarova_valuvskoe_0_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="9.88" length="26.86" shape="552.91,667.60 546.20,670.27 540.70,669.55 536.40,665.43 533.30,657.91"/>
+    </edge>
+    <edge id=":atlasova_habarova_valuvskoe_1" function="internal">
+        <lane id=":atlasova_habarova_valuvskoe_1_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="8.75" length="20.77" shape="551.48,664.72 546.34,666.76 542.11,666.16 538.79,662.93 536.39,657.07"/>
+    </edge>
+    <edge id=":atlasova_habarova_valuvskoe_2" function="internal">
+        <lane id=":atlasova_habarova_valuvskoe_2_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="5.80" length="8.50" shape="542.26,655.48 543.20,657.80 544.56,659.12 546.34,659.43 548.53,658.75"/>
+    </edge>
+    <edge id=":atlasova_habarova_valuvskoe_3" function="internal">
+        <lane id=":atlasova_habarova_valuvskoe_3_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="44.39" shape="542.26,655.48 543.49,664.50 543.47,676.00 542.37,688.44 540.33,700.25"/>
+        <lane id=":atlasova_habarova_valuvskoe_3_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="44.39" shape="539.75,656.16 541.37,665.07 542.22,676.34 541.98,688.54 540.33,700.25"/>
+        <lane id=":atlasova_habarova_valuvskoe_3_2" index="2" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="44.39" shape="539.75,656.16 540.88,664.96 540.66,675.99 539.35,687.96 537.21,699.55"/>
+    </edge>
+    <edge id=":atlasova_habarova_valuvskoe_6" function="internal">
+        <lane id=":atlasova_habarova_valuvskoe_6_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="40.93" shape="527.52,697.38 530.14,686.39 532.59,675.77 533.95,666.09 533.30,657.91"/>
+        <lane id=":atlasova_habarova_valuvskoe_6_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="40.93" shape="530.65,698.08 533.26,686.85 535.70,675.70 537.04,665.49 536.39,657.07"/>
+    </edge>
+    <edge id=":atlasova_habarova_valuvskoe_8" function="internal">
+        <lane id=":atlasova_habarova_valuvskoe_8_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="19.49" length="43.20" shape="533.77,698.78 537.70,682.52 541.47,670.43 545.08,662.50 548.53,658.75"/>
+    </edge>
+    <edge id=":atlasova_habarova_valuvskoe_9" function="internal">
+        <lane id=":atlasova_habarova_valuvskoe_9_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="3.78" length="5.15" shape="533.77,698.78 534.92,697.68 535.88,697.44 536.64,698.07 537.21,699.55"/>
+    </edge>
+    <edge id=":atlasova_habarova_valuvskoe_10" function="internal">
+        <lane id=":atlasova_habarova_valuvskoe_10_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="17.09" length="20.64" shape="550.56,681.89 548.14,684.82 546.40,688.90 544.96,694.23 543.46,700.95"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_0" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="11.62" length="21.99" shape="505.00,864.44 502.38,856.61 499.72,850.94 497.02,847.43 494.28,846.08"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_1" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="42.34" shape="505.00,864.44 502.59,853.80 501.56,843.32 501.71,832.76 502.85,821.86"/>
+        <lane id=":atlasova_moskvitina_chumakova_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="42.34" shape="508.10,863.66 505.71,853.21 504.70,843.16 504.87,833.02 506.02,822.32"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_3" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="9.89" length="25.19" shape="511.21,862.87 510.25,855.94 511.93,850.73 516.25,847.25 523.20,845.48"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_4" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="4.75" length="7.18" shape="511.21,862.87 512.19,860.10 513.57,858.92 515.35,859.31 517.53,861.28"/>
+        <lane id=":atlasova_moskvitina_chumakova_4_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="3.69" length="7.18" shape="511.21,862.87 511.71,861.46 512.41,860.86 513.31,861.06 514.42,862.06"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_6" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="6.73" length="11.09" shape="524.15,851.77 521.72,852.54 520.32,854.25 519.96,856.90 520.63,860.50"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_7" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="29.55" shape="523.67,848.60 515.58,848.70 507.11,847.90 499.58,846.82 494.28,846.08"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_8" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="11.48" length="35.91" shape="523.67,848.60 514.62,847.51 509.82,842.38 508.32,833.91 509.19,822.78"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_9" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_9_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="8.72" length="20.32" shape="519.10,824.22 518.32,832.40 518.66,838.14 520.13,841.44 522.72,842.32"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_10" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_10_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="38.11" shape="519.10,824.22 517.37,834.25 515.94,842.92 515.70,851.50 517.53,861.28"/>
+        <lane id=":atlasova_moskvitina_chumakova_10_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="38.11" shape="515.93,823.76 514.21,833.99 512.80,843.08 512.59,852.09 514.42,862.06"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_12" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_12_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="12.10" length="32.65" shape="512.77,823.30 510.31,833.82 506.41,841.13 501.07,845.21 494.28,846.08"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_13" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_13_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="4.84" length="7.62" shape="512.77,823.30 510.71,825.59 508.90,826.19 507.34,825.10 506.02,822.32"/>
+        <lane id=":atlasova_moskvitina_chumakova_13_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="3.81" length="7.62" shape="512.77,823.30 511.68,824.51 510.72,824.83 509.89,824.25 509.19,822.78"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_15" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_15_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="9.69" length="20.58" shape="494.82,839.56 497.37,838.65 499.56,835.39 501.39,829.80 502.85,821.86"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_16" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_16_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="28.84" shape="494.56,842.75 501.83,843.73 508.88,844.88 515.93,845.65 523.20,845.48"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_17" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_17_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.81" length="31.52" shape="494.56,842.75 502.77,844.55 509.33,848.24 514.25,853.82 517.53,861.28"/>
+    </edge>
+    <edge id=":atlasova_moskvitina_chumakova_18" function="internal">
+        <lane id=":atlasova_moskvitina_chumakova_18_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="13.38" length="29.54" shape="494.56,842.75 501.29,844.48 506.84,848.27 511.22,854.14 514.42,862.06"/>
+    </edge>
+    <edge id=":gneJ0_0" function="internal">
+        <lane id=":gneJ0_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="8.27" shape="532.61,901.59 532.82,904.09 532.19,905.88 531.57,907.66 531.78,910.17"/>
+        <lane id=":gneJ0_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="8.27" shape="529.54,902.49 531.78,910.17"/>
+        <lane id=":gneJ0_0_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="8.27" shape="526.47,903.38 528.71,911.06"/>
+    </edge>
+    <edge id=":gneJ1_0" function="internal">
+        <lane id=":gneJ1_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="0.30" shape="517.98,741.02 518.05,740.72"/>
+        <lane id=":gneJ1_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="0.30" shape="521.11,741.70 521.17,741.41"/>
+        <lane id=":gneJ1_0_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="0.30" shape="524.23,742.39 524.30,742.09"/>
+    </edge>
+    <edge id=":gneJ2_0" function="internal">
+        <lane id=":gneJ2_0_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="0.10" width="2.00" shape="482.04,576.58 482.04,576.58"/>
+        <lane id=":gneJ2_0_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="20.75" length="0.10" shape="480.26,578.47 480.26,578.47"/>
+    </edge>
+    <edge id=":gneJ8_0" function="internal">
+        <lane id=":gneJ8_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="10.39" shape="518.79,910.39 515.58,900.69"/>
+        <lane id=":gneJ8_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="10.39" shape="521.87,909.50 518.65,899.79"/>
+        <lane id=":gneJ8_0_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="10.39" shape="521.87,909.50 521.40,906.42 521.77,904.20 522.16,901.99 521.72,898.90"/>
+    </edge>
+    <edge id=":habarova_in_to_1_2_0" function="internal">
+        <lane id=":habarova_in_to_1_2_0_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="38.76" shape="600.97,635.55 595.48,640.60 586.49,648.43 577.48,656.24 571.93,661.22"/>
+    </edge>
+    <edge id=":habarova_in_to_1_2_1" function="internal">
+        <lane id=":habarova_in_to_1_2_1_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="38.50" shape="600.97,635.55 595.81,639.82 587.17,646.05 577.56,652.56 569.51,657.67"/>
+    </edge>
+    <edge id=":habarova_in_to_1_2_2" function="internal">
+        <lane id=":habarova_in_to_1_2_2_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="38.24" shape="600.97,635.55 595.57,639.37 586.41,644.64 576.28,650.18 567.99,654.85"/>
+    </edge>
+
+    <edge id="atlasova_in" from="atlasova_end" to="gneJ8" name="улица Атласова" priority="11" type="highway.secondary" length="400.00" shape="595.24,1145.08 522.11,904.80">
+        <lane id="atlasova_in_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="400.00" shape="590.65,1146.48 518.79,910.39">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <lane id="atlasova_in_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="400.00" shape="593.71,1145.55 521.87,909.50">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <param key="origTo" value="783810140"/>
+        <param key="ref" value="46Н-04875"/>
+    </edge>
+    <edge id="atlasova_in_3" from="gneJ8" to="atlasova_moskvitina_chumakova" name="улица Атласова" priority="11" type="highway.secondary" shape="524.38,902.29 511.47,858.07">
+        <lane id="atlasova_in_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="37.65" shape="515.58,900.69 505.00,864.44">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <lane id="atlasova_in_3_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="37.65" shape="518.65,899.79 508.10,863.66">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <lane id="atlasova_in_3_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="37.65" shape="521.72,898.90 511.21,862.87">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <param key="origTo" value="783810140"/>
+        <param key="ref" value="46Н-04875"/>
+    </edge>
+    <edge id="atlasova_out" from="gneJ0" to="atlasova_end" name="улица Атласова" priority="11" type="highway.secondary">
+        <lane id="atlasova_out_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="243.29" shape="531.78,910.17 599.85,1143.74">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <lane id="atlasova_out_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="243.29" shape="528.71,911.06 596.78,1144.63">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <param key="origFrom" value="783810140"/>
+        <param key="ref" value="46Н-04875"/>
+    </edge>
+    <edge id="atlasova_out_3" from="atlasova_moskvitina_chumakova" to="gneJ0" name="улица Атласова" priority="11" type="highway.secondary" shape="511.59,858.07 526.05,907.67">
+        <lane id="atlasova_out_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="42.92" shape="520.63,860.50 532.61,901.59">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <lane id="atlasova_out_3_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="42.92" shape="517.53,861.28 529.54,902.49">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <lane id="atlasova_out_3_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="42.92" shape="514.42,862.06 526.47,903.38">
+            <param key="origId" value="355346872"/>
+        </lane>
+        <param key="origFrom" value="783810140"/>
+        <param key="ref" value="46Н-04875"/>
+    </edge>
+    <edge id="atlasova_to_valuevskoe_1" from="atlasova_moskvitina_chumakova" to="gneJ1" name="улица Атласова" priority="11" type="highway.secondary" shape="510.68,823.64 516.53,782.21 521.84,760.80 525.83,742.58">
+        <lane id="atlasova_to_valuevskoe_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="82.11" shape="502.85,821.86 508.67,780.68 514.05,758.98 517.98,741.02">
+            <param key="origId" value="239308757"/>
+        </lane>
+        <lane id="atlasova_to_valuevskoe_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="82.11" shape="506.02,822.32 511.81,781.29 517.17,759.71 521.11,741.70">
+            <param key="origId" value="239308757"/>
+        </lane>
+        <lane id="atlasova_to_valuevskoe_1_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="82.11" shape="509.19,822.78 514.96,781.90 520.28,760.44 524.23,742.39">
+            <param key="origId" value="239308757"/>
+        </lane>
+        <param key="origFrom" value="3609616164"/>
+        <param key="origTo" value="1231284608"/>
+    </edge>
+    <edge id="atlasova_to_valuevskoe_2" from="gneJ1" to="atlasova_habarova_valuvskoe" name="улица Атласова" priority="11" type="highway.secondary" shape="525.83,742.58 535.45,698.58">
+        <lane id="atlasova_to_valuevskoe_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="19.50" length="44.35" shape="518.05,740.72 527.52,697.38">
+            <param key="origId" value="239308757"/>
+        </lane>
+        <lane id="atlasova_to_valuevskoe_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="19.50" length="44.35" shape="521.17,741.41 530.65,698.08">
+            <param key="origId" value="239308757"/>
+        </lane>
+        <lane id="atlasova_to_valuevskoe_2_2" index="2" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="19.50" length="44.35" shape="524.30,742.09 533.77,698.78">
+            <param key="origId" value="239308757"/>
+        </lane>
+        <param key="origFrom" value="3609616164"/>
+        <param key="origTo" value="1231284608"/>
+    </edge>
+    <edge id="chumakova_in" from="chumakova_end" to="atlasova_moskvitina_chumakova" name="улица Академика Чумакова" priority="10" type="highway.tertiary" shape="90.23,907.93 133.51,850.13 159.82,827.86 192.77,821.75 429.61,838.15 494.32,844.33">
+        <lane id="chumakova_in_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="444.04" shape="87.55,903.50 129.99,846.82 157.69,823.37 192.49,816.92 430.00,833.37 494.82,839.56">
+            <param key="origId" value="39977185"/>
+        </lane>
+        <lane id="chumakova_in_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="444.04" shape="90.11,905.42 132.34,849.03 159.11,826.36 192.68,820.14 429.74,836.56 494.56,842.75">
+            <param key="origId" value="39977185"/>
+        </lane>
+        <param key="origTo" value="6557182106"/>
+    </edge>
+    <edge id="chumakova_out" from="atlasova_moskvitina_chumakova" to="chumakova_end" name="улица Академика Чумакова" priority="10" type="highway.tertiary" shape="494.88,844.53 450.20,840.11 429.61,838.15 192.98,822.18 159.99,828.04 133.65,850.63 92.87,905.04">
+        <lane id="chumakova_out_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="438.80" shape="494.28,846.08 450.04,841.70 429.48,839.74 193.07,823.79 160.70,829.54 134.82,851.73 92.98,907.56">
+            <param key="origId" value="39977185"/>
+        </lane>
+        <param key="origTo" value="783817524"/>
+    </edge>
+    <edge id="habarova_in" from="habarova_end" to="habarova_in_to_1_2" name="улица Хабарова" priority="3" type="highway.residential" shape="868.90,262.56 806.93,341.98 798.93,356.44 794.98,363.58 789.93,370.13 779.32,383.87 749.44,418.06 730.15,440.31 695.16,478.34 675.37,499.15 665.30,511.08 623.03,607.57 616.51,616.74 595.84,638.65">
+        <lane id="habarova_in_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="461.84" shape="869.45,264.46 808.27,342.86 800.33,357.21 796.32,364.46 791.20,371.11 780.56,384.89 750.65,419.11 731.34,441.38 696.33,479.43 676.56,500.22 666.67,511.93 624.43,608.36 617.75,617.76 600.97,635.55">
+            <param key="origId" value="63093861"/>
+        </lane>
+    </edge>
+    <edge id="habarova_in_1" from="habarova_in_to_1_2" to="atlasova_habarova_valuvskoe" name="улица Хабарова" priority="3" type="highway.residential" spreadType="center" length="15.15" shape="584.92,649.99 576.41,656.77 554.05,678.99 541.96,689.05">
+        <lane id="habarova_in_1_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="15.15" shape="571.93,661.22 554.05,678.99 550.56,681.89">
+            <param key="origId" value="692468383"/>
+        </lane>
+        <param key="origFrom" value="783881582"/>
+        <param key="origTo" value="6500875282"/>
+    </edge>
+    <edge id="habarova_in_2" from="habarova_in_to_1_2" to="atlasova_habarova_valuvskoe" name="улица Хабарова" priority="3" type="highway.residential" spreadType="center" shape="583.59,648.23 569.58,655.76 555.64,664.10">
+        <lane id="habarova_in_2_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="19.29" shape="569.51,657.67 552.91,667.60">
+            <param key="origId" value="692468387"/>
+        </lane>
+        <lane id="habarova_in_2_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="19.29" shape="567.99,654.85 551.48,664.72">
+            <param key="origId" value="692468387"/>
+        </lane>
+        <param key="origFrom" value="783881582"/>
+        <param key="origTo" value="6500875283"/>
+    </edge>
+    <edge id="habarova_out" from="atlasova_habarova_valuvskoe" to="habarova_end" name="улица Хабарова" priority="3" type="highway.residential" shape="544.14,662.71 594.62,637.66 597.31,636.40 601.22,632.63 619.80,612.01 622.62,606.46 665.30,510.94 675.37,499.15 695.16,478.34 730.15,440.31 749.44,418.06 779.32,383.87 789.93,370.13 794.98,363.58 806.93,341.98 867.08,264.08">
+        <lane id="habarova_out_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="517.58" shape="548.53,658.75 593.91,636.23 596.39,635.06 600.07,631.52 618.47,611.10 621.18,605.77 663.93,510.08 674.18,498.08 693.99,477.25 728.96,439.24 748.23,417.01 778.08,382.85 788.66,369.15 793.64,362.70 805.59,341.10 866.52,262.19"/>
+    </edge>
+    <edge id="moskvitina_in" from="moskvitina_end" to="atlasova_moskvitina_chumakova" name="улица Москвитина" priority="3" type="highway.residential" shape="962.95,730.98 782.23,782.64 638.60,821.82 591.63,835.30 544.56,844.88 522.05,847.16">
+        <lane id="moskvitina_in_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="455.39" shape="964.27,735.60 783.52,787.26 639.89,826.44 592.77,839.97 545.28,849.63 524.15,851.77">
+            <param key="origId" value="362626831"/>
+        </lane>
+        <lane id="moskvitina_in_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="455.39" shape="963.39,732.52 782.66,784.18 639.03,823.36 592.01,836.86 544.80,846.46 523.67,848.60">
+            <param key="origId" value="362626831"/>
+        </lane>
+    </edge>
+    <edge id="moskvitina_out" from="atlasova_moskvitina_chumakova" to="moskvitina_end" name="улица Москвитина" priority="3" type="highway.residential" shape="521.58,847.27 544.91,844.72 591.30,835.30 638.60,821.82 782.23,782.64 962.95,730.98">
+        <lane id="moskvitina_out_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="454.54" shape="522.72,842.32 544.17,839.97 590.16,830.63 637.31,817.20 780.94,778.02 961.63,726.36">
+            <param key="origId" value="362626831"/>
+        </lane>
+        <lane id="moskvitina_out_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="454.54" shape="523.20,845.48 544.66,843.14 590.92,833.74 638.17,820.28 781.80,781.10 962.51,729.44">
+            <param key="origId" value="362626831"/>
+        </lane>
+        <param key="origFrom" value="783810140"/>
+    </edge>
+    <edge id="valuevskoe_in" from="valuevskoe_end" to="gneJ2" priority="1" type="highway.bridleway">
+        <lane id="valuevskoe_in_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="598.01" width="2.00" shape="45.95,167.39 482.04,576.58"/>
+        <lane id="valuevskoe_in_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="598.01" shape="44.17,169.28 480.26,578.47"/>
+    </edge>
+    <edge id="valuevskoe_in_2" from="gneJ2" to="atlasova_habarova_valuvskoe" priority="1" type="highway.bridleway" shape="479.17,579.64 525.43,623.05 532.69,635.51 538.91,659.28">
+        <lane id="valuevskoe_in_2_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="19.50" length="101.25" width="2.00" shape="482.04,576.58 528.75,620.41 536.61,633.89 542.26,655.48"/>
+        <lane id="valuevskoe_in_2_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="19.50" length="101.25" shape="480.26,578.47 526.69,622.04 534.18,634.89 539.75,656.16"/>
+    </edge>
+    <edge id="valuevskoe_out" from="atlasova_habarova_valuvskoe" to="valuevskoe_end" priority="1" type="highway.bridleway" length="965.00" shape="538.78,659.78 532.27,635.74 525.29,623.39 42.64,170.13">
+        <lane id="valuevskoe_out_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="965.00" shape="533.30,657.91 527.79,637.58 521.47,626.39 39.75,174.00"/>
+        <lane id="valuevskoe_out_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="965.00" shape="536.39,657.07 530.78,636.35 524.02,624.39 41.94,171.67"/>
+    </edge>
+    <edge id="valuevskoe_to_atlasova" from="atlasova_habarova_valuvskoe" to="atlasova_moskvitina_chumakova" priority="-1" shape="535.65,699.20 516.97,782.68 511.12,823.51">
+        <lane id="valuevskoe_to_atlasova_0" index="0" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="125.98" shape="543.46,700.95 524.84,784.12 519.10,824.22"/>
+        <lane id="valuevskoe_to_atlasova_1" index="1" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="125.98" shape="540.33,700.25 521.69,783.55 515.93,823.76"/>
+        <lane id="valuevskoe_to_atlasova_2" index="2" disallow="pedestrian tram rail_urban rail rail_electric rail_fast ship" speed="22.00" length="125.98" shape="537.21,699.55 518.54,782.97 512.77,823.30"/>
+    </edge>
+
+    <tlLogic id="gneJ21" type="static" programID="-1" offset="0">
+        <phase duration="50" state="rrrrrrrrrrrrrrrrr"/>
+    </tlLogic>
+    <tlLogic id="gneJ8" type="static" programID="-1" offset="0">
+        <phase duration="35" state="rrrrrrrrrrr"/>
+    </tlLogic>
+
+    <junction id="atlasova_end" type="dead_end" x="595.24" y="1145.08" incLanes="atlasova_out_0 atlasova_out_1" intLanes="" shape="595.24,1145.08 589.12,1146.94 601.38,1143.29"/>
+    <junction id="atlasova_habarova_valuvskoe" type="traffic_light" x="539.74" y="679.51" incLanes="habarova_in_2_0 habarova_in_2_1 valuevskoe_in_2_0 valuevskoe_in_2_1 atlasova_to_valuevskoe_2_0 atlasova_to_valuevskoe_2_1 atlasova_to_valuevskoe_2_2 habarova_in_1_0" intLanes=":atlasova_habarova_valuvskoe_0_0 :atlasova_habarova_valuvskoe_1_0 :atlasova_habarova_valuvskoe_2_0 :atlasova_habarova_valuvskoe_3_0 :atlasova_habarova_valuvskoe_3_1 :atlasova_habarova_valuvskoe_3_2 :atlasova_habarova_valuvskoe_6_0 :atlasova_habarova_valuvskoe_6_1 :atlasova_habarova_valuvskoe_8_0 :atlasova_habarova_valuvskoe_9_0 :atlasova_habarova_valuvskoe_10_0" shape="553.62,669.04 547.82,657.31 545.72,657.87 544.88,657.68 544.18,657.17 543.63,656.35 543.22,655.22 531.76,658.33 533.39,666.42 533.46,672.51 532.34,677.59 530.46,682.70 528.20,688.84 525.96,697.03 545.02,701.30 545.72,697.10 546.01,693.77 546.31,690.99 547.05,688.48 548.67,685.96 551.59,683.12 549.54,680.66">
+        <request index="0"  response="00111111000" foes="00111111000" cont="0"/>
+        <request index="1"  response="00111111000" foes="00111111000" cont="0"/>
+        <request index="2"  response="00000000000" foes="00100000000" cont="0"/>
+        <request index="3"  response="00000010000" foes="01100010011" cont="0"/>
+        <request index="4"  response="00000000000" foes="01100001011" cont="0"/>
+        <request index="5"  response="00000000000" foes="01100000011" cont="0"/>
+        <request index="6"  response="00000000000" foes="00000000011" cont="0"/>
+        <request index="7"  response="00000000000" foes="00000000011" cont="0"/>
+        <request index="8"  response="00000111100" foes="00000111111" cont="0"/>
+        <request index="9"  response="00000111000" foes="00000111000" cont="0"/>
+        <request index="10" response="00000000000" foes="00000000000" cont="0"/>
+    </junction>
+    <junction id="atlasova_moskvitina_chumakova" type="traffic_light" x="505.78" y="838.29" incLanes="atlasova_in_3_0 atlasova_in_3_1 atlasova_in_3_2 moskvitina_in_0 moskvitina_in_1 valuevskoe_to_atlasova_0 valuevskoe_to_atlasova_1 valuevskoe_to_atlasova_2 chumakova_in_0 chumakova_in_1" intLanes=":atlasova_moskvitina_chumakova_0_0 :atlasova_moskvitina_chumakova_1_0 :atlasova_moskvitina_chumakova_1_1 :atlasova_moskvitina_chumakova_3_0 :atlasova_moskvitina_chumakova_4_0 :atlasova_moskvitina_chumakova_4_1 :atlasova_moskvitina_chumakova_6_0 :atlasova_moskvitina_chumakova_7_0 :atlasova_moskvitina_chumakova_8_0 :atlasova_moskvitina_chumakova_9_0 :atlasova_moskvitina_chumakova_10_0 :atlasova_moskvitina_chumakova_10_1 :atlasova_moskvitina_chumakova_12_0 :atlasova_moskvitina_chumakova_13_0 :atlasova_moskvitina_chumakova_13_1 :atlasova_moskvitina_chumakova_15_0 :atlasova_moskvitina_chumakova_16_0 :atlasova_moskvitina_chumakova_17_0 :atlasova_moskvitina_chumakova_18_0" shape="503.56,864.80 522.17,860.11 521.85,857.82 522.42,855.68 524.38,853.32 522.53,841.04 520.43,840.89 519.78,838.43 519.58,834.87 519.83,830.20 520.53,824.43 501.12,821.61 500.31,826.45 499.40,830.39 498.40,833.43 497.30,835.57 494.93,838.21 494.17,847.47 497.34,851.76 499.01,853.86 500.60,856.73 502.12,860.38" customShape="1">
+        <request index="0"  response="0000000000000000000" foes="0000001000010000000" cont="0"/>
+        <request index="1"  response="0000000000000000000" foes="1111111000010000000" cont="0"/>
+        <request index="2"  response="0000000000000000000" foes="1111111000010000000" cont="0"/>
+        <request index="3"  response="0000000000000000000" foes="1110000110110000000" cont="0"/>
+        <request index="4"  response="1100000110000000000" foes="1100000110000000000" cont="0"/>
+        <request index="5"  response="1100000110000000000" foes="1100000110000000000" cont="0"/>
+        <request index="6"  response="0000000000000000000" foes="0000000000000000000" cont="0"/>
+        <request index="7"  response="0000000000000001111" foes="1100001110000001111" cont="0"/>
+        <request index="8"  response="0010000110000001000" foes="0010111110000001000" cont="0"/>
+        <request index="9"  response="0000000000000000000" foes="0000000000000000000" cont="0"/>
+        <request index="10" response="0000000000010001000" foes="1110000000110111000" cont="0"/>
+        <request index="11" response="0000000000010001000" foes="1110000000110111000" cont="0"/>
+        <request index="12" response="0010000000110000111" foes="1110000000110000111" cont="0"/>
+        <request index="13" response="0000000000100000110" foes="0000000000100000110" cont="0"/>
+        <request index="14" response="0000000000100000110" foes="0000000000100000110" cont="0"/>
+        <request index="15" response="0000000000000000110" foes="0000000000000000110" cont="0"/>
+        <request index="16" response="0000000110000001110" foes="0000001110100001110" cont="0"/>
+        <request index="17" response="0000001110010001110" foes="0000001110010111110" cont="0"/>
+        <request index="18" response="0000001110010001110" foes="0000001110010111110" cont="0"/>
+    </junction>
+    <junction id="chumakova_end" type="dead_end" x="91.55" y="906.49" incLanes="chumakova_out_0" intLanes="" shape="91.40,906.37 86.27,902.54 94.26,908.52"/>
+    <junction id="gneJ0" type="priority" x="526.05" y="907.67" incLanes="atlasova_out_3_0 atlasova_out_3_1 atlasova_out_3_2" intLanes=":gneJ0_0_0 :gneJ0_0_1 :gneJ0_0_2" shape="527.17,911.51 533.31,909.72 533.26,906.58 534.20,904.29 534.42,902.93 534.15,901.14 524.93,903.83">
+        <request index="0" response="010" foes="010" cont="0"/>
+        <request index="1" response="000" foes="001" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="gneJ1" type="priority" x="525.83" y="742.58" incLanes="atlasova_to_valuevskoe_1_0 atlasova_to_valuevskoe_1_1 atlasova_to_valuevskoe_1_2" intLanes=":gneJ1_0_0 :gneJ1_0_1 :gneJ1_0_2" shape="525.86,742.43 516.48,740.38 516.42,740.67 525.80,742.73">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="gneJ2" type="priority" x="479.17" y="579.64" incLanes="valuevskoe_in_0 valuevskoe_in_1" intLanes=":gneJ2_0_0 :gneJ2_0_1" shape="479.17,579.64 482.73,575.85 479.17,579.64">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="gneJ8" type="priority" x="524.38" y="902.29" incLanes="atlasova_in_0 atlasova_in_1" intLanes=":gneJ8_0_0 :gneJ8_0_1 :gneJ8_0_2" shape="517.33,910.82 523.37,909.06 523.33,904.74 523.32,901.58 523.26,898.45 514.04,901.14 514.91,904.25 515.68,906.97" customShape="1" fringe="inner">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="habarova_end" type="dead_end" x="867.99" y="263.32" incLanes="habarova_out_0" intLanes="" shape="868.19,263.47 870.71,265.44 865.25,261.21 867.79,263.16"/>
+    <junction id="habarova_in_to_1_2" type="priority" x="591.19" y="642.44" incLanes="habarova_in_0" intLanes=":habarova_in_to_1_2_0_0 :habarova_in_to_1_2_1_0 :habarova_in_to_1_2_2_0" shape="602.13,636.64 599.80,634.45 594.02,639.94 589.20,643.31 584.73,645.46 579.99,647.26 574.36,649.62 567.23,653.44 570.26,659.08 570.93,659.96 572.93,662.48">
+        <request index="0" response="000" foes="000" cont="0"/>
+        <request index="1" response="000" foes="000" cont="0"/>
+        <request index="2" response="000" foes="000" cont="0"/>
+    </junction>
+    <junction id="moskvitina_end" type="dead_end" x="962.95" y="730.98" incLanes="moskvitina_out_0 moskvitina_out_1" intLanes="" shape="962.95,730.98 961.19,724.83 962.95,730.98"/>
+    <junction id="valuevskoe_end" type="dead_end" x="43.08" y="170.45" incLanes="valuevskoe_out_0 valuevskoe_out_1" intLanes="" shape="43.08,170.45 46.64,166.66 38.65,175.16"/>
+
+    <connection from="atlasova_in" to="atlasova_in_3" fromLane="0" toLane="0" via=":gneJ8_0_0" dir="s" state="M"/>
+    <connection from="atlasova_in" to="atlasova_in_3" fromLane="1" toLane="1" via=":gneJ8_0_1" dir="s" state="M"/>
+    <connection from="atlasova_in" to="atlasova_in_3" fromLane="1" toLane="2" via=":gneJ8_0_2" dir="s" state="M"/>
+    <connection from="atlasova_in_3" to="chumakova_out" fromLane="0" toLane="0" via=":atlasova_moskvitina_chumakova_0_0" tl="gneJ21" linkIndex="0" dir="r" state="O"/>
+    <connection from="atlasova_in_3" to="atlasova_to_valuevskoe_1" fromLane="0" toLane="0" via=":atlasova_moskvitina_chumakova_1_0" tl="gneJ21" linkIndex="1" dir="s" state="O"/>
+    <connection from="atlasova_in_3" to="atlasova_to_valuevskoe_1" fromLane="1" toLane="1" via=":atlasova_moskvitina_chumakova_1_1" tl="gneJ21" linkIndex="2" dir="s" state="O"/>
+    <connection from="atlasova_in_3" to="moskvitina_out" fromLane="2" toLane="1" via=":atlasova_moskvitina_chumakova_3_0" tl="gneJ21" linkIndex="3" dir="l" state="O"/>
+    <connection from="atlasova_in_3" to="atlasova_out_3" fromLane="2" toLane="1" via=":atlasova_moskvitina_chumakova_4_0" tl="gneJ21" linkIndex="4" dir="t" state="o"/>
+    <connection from="atlasova_in_3" to="atlasova_out_3" fromLane="2" toLane="2" uncontrolled="1" via=":atlasova_moskvitina_chumakova_4_1" dir="t" state="m"/>
+    <connection from="atlasova_out_3" to="atlasova_out" fromLane="0" toLane="0" via=":gneJ0_0_0" dir="s" state="m"/>
+    <connection from="atlasova_out_3" to="atlasova_out" fromLane="1" toLane="0" keepClear="0" via=":gneJ0_0_1" dir="s" state="M"/>
+    <connection from="atlasova_out_3" to="atlasova_out" fromLane="2" toLane="1" keepClear="0" via=":gneJ0_0_2" dir="s" state="M"/>
+    <connection from="atlasova_to_valuevskoe_1" to="atlasova_to_valuevskoe_2" fromLane="0" toLane="0" via=":gneJ1_0_0" dir="s" state="M"/>
+    <connection from="atlasova_to_valuevskoe_1" to="atlasova_to_valuevskoe_2" fromLane="1" toLane="1" via=":gneJ1_0_1" dir="s" state="M"/>
+    <connection from="atlasova_to_valuevskoe_1" to="atlasova_to_valuevskoe_2" fromLane="2" toLane="2" via=":gneJ1_0_2" dir="s" state="M"/>
+    <connection from="atlasova_to_valuevskoe_2" to="valuevskoe_out" fromLane="0" toLane="0" via=":atlasova_habarova_valuvskoe_6_0" tl="gneJ8" linkIndex="6" dir="s" state="O"/>
+    <connection from="atlasova_to_valuevskoe_2" to="valuevskoe_out" fromLane="1" toLane="1" via=":atlasova_habarova_valuvskoe_6_1" tl="gneJ8" linkIndex="7" dir="s" state="O"/>
+    <connection from="atlasova_to_valuevskoe_2" to="habarova_out" fromLane="2" toLane="0" via=":atlasova_habarova_valuvskoe_8_0" tl="gneJ8" linkIndex="8" dir="l" state="o"/>
+    <connection from="atlasova_to_valuevskoe_2" to="valuevskoe_to_atlasova" fromLane="2" toLane="2" via=":atlasova_habarova_valuvskoe_9_0" tl="gneJ8" linkIndex="9" dir="t" state="o"/>
+    <connection from="chumakova_in" to="atlasova_to_valuevskoe_1" fromLane="0" toLane="0" via=":atlasova_moskvitina_chumakova_15_0" tl="gneJ21" linkIndex="13" dir="r" state="o"/>
+    <connection from="chumakova_in" to="moskvitina_out" fromLane="1" toLane="1" via=":atlasova_moskvitina_chumakova_16_0" tl="gneJ21" linkIndex="14" dir="s" state="o"/>
+    <connection from="chumakova_in" to="atlasova_out_3" fromLane="1" toLane="1" via=":atlasova_moskvitina_chumakova_17_0" tl="gneJ21" linkIndex="15" dir="l" state="o"/>
+    <connection from="chumakova_in" to="atlasova_out_3" fromLane="1" toLane="2" via=":atlasova_moskvitina_chumakova_18_0" tl="gneJ21" linkIndex="16" dir="l" state="o"/>
+    <connection from="habarova_in" to="habarova_in_1" fromLane="0" toLane="0" via=":habarova_in_to_1_2_0_0" dir="s" state="M"/>
+    <connection from="habarova_in" to="habarova_in_2" fromLane="0" toLane="0" via=":habarova_in_to_1_2_1_0" dir="L" state="M"/>
+    <connection from="habarova_in" to="habarova_in_2" fromLane="0" toLane="1" via=":habarova_in_to_1_2_2_0" dir="L" state="M"/>
+    <connection from="habarova_in_1" to="valuevskoe_to_atlasova" fromLane="0" toLane="0" via=":atlasova_habarova_valuvskoe_10_0" tl="gneJ8" linkIndex="10" dir="s" state="O"/>
+    <connection from="habarova_in_2" to="valuevskoe_out" fromLane="0" toLane="0" via=":atlasova_habarova_valuvskoe_0_0" tl="gneJ8" linkIndex="0" dir="l" state="o"/>
+    <connection from="habarova_in_2" to="valuevskoe_out" fromLane="1" toLane="1" via=":atlasova_habarova_valuvskoe_1_0" tl="gneJ8" linkIndex="1" dir="l" state="o"/>
+    <connection from="moskvitina_in" to="atlasova_out_3" fromLane="0" toLane="0" via=":atlasova_moskvitina_chumakova_6_0" tl="gneJ21" linkIndex="5" dir="r" state="O"/>
+    <connection from="moskvitina_in" to="chumakova_out" fromLane="1" toLane="0" via=":atlasova_moskvitina_chumakova_7_0" tl="gneJ21" linkIndex="6" dir="s" state="o"/>
+    <connection from="moskvitina_in" to="atlasova_to_valuevskoe_1" fromLane="1" toLane="2" via=":atlasova_moskvitina_chumakova_8_0" tl="gneJ21" linkIndex="7" dir="l" state="o"/>
+    <connection from="valuevskoe_in" to="valuevskoe_in_2" fromLane="0" toLane="0" via=":gneJ2_0_0" dir="s" state="M"/>
+    <connection from="valuevskoe_in" to="valuevskoe_in_2" fromLane="1" toLane="1" via=":gneJ2_0_1" dir="s" state="M"/>
+    <connection from="valuevskoe_in_2" to="habarova_out" fromLane="0" toLane="0" via=":atlasova_habarova_valuvskoe_2_0" tl="gneJ8" linkIndex="2" dir="r" state="O"/>
+    <connection from="valuevskoe_in_2" to="valuevskoe_to_atlasova" fromLane="0" toLane="1" via=":atlasova_habarova_valuvskoe_3_0" tl="gneJ8" linkIndex="3" dir="s" state="o"/>
+    <connection from="valuevskoe_in_2" to="valuevskoe_to_atlasova" fromLane="1" toLane="1" via=":atlasova_habarova_valuvskoe_3_1" tl="gneJ8" linkIndex="4" dir="s" state="O"/>
+    <connection from="valuevskoe_in_2" to="valuevskoe_to_atlasova" fromLane="1" toLane="2" via=":atlasova_habarova_valuvskoe_3_2" tl="gneJ8" linkIndex="5" dir="s" state="O"/>
+    <connection from="valuevskoe_to_atlasova" to="moskvitina_out" fromLane="0" toLane="0" via=":atlasova_moskvitina_chumakova_9_0" tl="gneJ21" linkIndex="8" dir="r" state="O"/>
+    <connection from="valuevskoe_to_atlasova" to="atlasova_out_3" fromLane="0" toLane="1" via=":atlasova_moskvitina_chumakova_10_0" tl="gneJ21" linkIndex="9" dir="s" state="o"/>
+    <connection from="valuevskoe_to_atlasova" to="atlasova_out_3" fromLane="1" toLane="2" via=":atlasova_moskvitina_chumakova_10_1" tl="gneJ21" linkIndex="10" dir="s" state="o"/>
+    <connection from="valuevskoe_to_atlasova" to="chumakova_out" fromLane="2" toLane="0" via=":atlasova_moskvitina_chumakova_12_0" tl="gneJ21" linkIndex="11" dir="l" state="o"/>
+    <connection from="valuevskoe_to_atlasova" to="atlasova_to_valuevskoe_1" fromLane="2" toLane="1" via=":atlasova_moskvitina_chumakova_13_0" tl="gneJ21" linkIndex="12" dir="t" state="o"/>
+    <connection from="valuevskoe_to_atlasova" to="atlasova_to_valuevskoe_1" fromLane="2" toLane="2" uncontrolled="1" via=":atlasova_moskvitina_chumakova_13_1" dir="t" state="m"/>
+
+    <connection from=":atlasova_habarova_valuvskoe_0" to="valuevskoe_out" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_1" to="valuevskoe_out" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_2" to="habarova_out" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_3" to="valuevskoe_to_atlasova" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_3" to="valuevskoe_to_atlasova" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_3" to="valuevskoe_to_atlasova" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_6" to="valuevskoe_out" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_6" to="valuevskoe_out" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_8" to="habarova_out" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_9" to="valuevskoe_to_atlasova" fromLane="0" toLane="2" dir="t" state="M"/>
+    <connection from=":atlasova_habarova_valuvskoe_10" to="valuevskoe_to_atlasova" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_0" to="chumakova_out" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_1" to="atlasova_to_valuevskoe_1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_1" to="atlasova_to_valuevskoe_1" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_3" to="moskvitina_out" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_4" to="atlasova_out_3" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_4" to="atlasova_out_3" fromLane="1" toLane="2" dir="t" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_6" to="atlasova_out_3" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_7" to="chumakova_out" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_8" to="atlasova_to_valuevskoe_1" fromLane="0" toLane="2" dir="l" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_9" to="moskvitina_out" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_10" to="atlasova_out_3" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_10" to="atlasova_out_3" fromLane="1" toLane="2" dir="s" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_12" to="chumakova_out" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_13" to="atlasova_to_valuevskoe_1" fromLane="0" toLane="1" dir="t" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_13" to="atlasova_to_valuevskoe_1" fromLane="1" toLane="2" dir="t" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_15" to="atlasova_to_valuevskoe_1" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_16" to="moskvitina_out" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_17" to="atlasova_out_3" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":atlasova_moskvitina_chumakova_18" to="atlasova_out_3" fromLane="0" toLane="2" dir="l" state="M"/>
+    <connection from=":gneJ0_0" to="atlasova_out" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":gneJ0_0" to="atlasova_out" fromLane="1" toLane="0" dir="s" state="M"/>
+    <connection from=":gneJ0_0" to="atlasova_out" fromLane="2" toLane="1" dir="s" state="M"/>
+    <connection from=":gneJ1_0" to="atlasova_to_valuevskoe_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":gneJ1_0" to="atlasova_to_valuevskoe_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":gneJ1_0" to="atlasova_to_valuevskoe_2" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":gneJ2_0" to="valuevskoe_in_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":gneJ2_0" to="valuevskoe_in_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":gneJ8_0" to="atlasova_in_3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":gneJ8_0" to="atlasova_in_3" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":gneJ8_0" to="atlasova_in_3" fromLane="2" toLane="2" dir="s" state="M"/>
+    <connection from=":habarova_in_to_1_2_0" to="habarova_in_1" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":habarova_in_to_1_2_1" to="habarova_in_2" fromLane="0" toLane="0" dir="L" state="M"/>
+    <connection from=":habarova_in_to_1_2_2" to="habarova_in_2" fromLane="0" toLane="1" dir="L" state="M"/>
+
+</net>
