@@ -1,11 +1,11 @@
 """Environments from RESCO: https://github.com/jault/RESCO, paper https://people.engr.tamu.edu/guni/Papers/NeurIPS-signals.pdf ."""
 import os
 
-import sumo_rl
-from sumo_rl import env, parallel_env
+import sumo_atclib
+from sumo_atclib import env, parallel_env
 
 
-PATH = os.path.dirname(sumo_rl.__file__)
+PATH = os.path.dirname(sumo_atclib.__file__)
 
 
 def grid4x4(parallel=True, **kwargs):

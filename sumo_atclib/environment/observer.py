@@ -4,7 +4,7 @@ from abc import abstractmethod
 import numpy as np
 from gymnasium import spaces
 
-from sumo_rl.util.links_utils import make_links
+from sumo_atclib.util.links_utils import make_links
 
 
 MIN_SPEED = 1

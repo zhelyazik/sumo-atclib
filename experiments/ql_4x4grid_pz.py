@@ -13,9 +13,9 @@ else:
 
 import traci
 
-import sumo_rl
-from sumo_rl.agents import QLAgent
-from sumo_rl.exploration import EpsilonGreedy
+import sumo_atclib
+from sumo_atclib.agents import QLAgent
+from sumo_atclib.exploration import EpsilonGreedy
 
 
 if __name__ == "__main__":
@@ -24,7 +24,7 @@ if __name__ == "__main__":
     decay = 1
     runs = 1
 
-    env = sumo_rl.env(
+    env = sumo_atclib.env(
         net_file="nets/4x4-Lucas/4x4.net.xml",
         route_file="nets/4x4-Lucas/4x4c1c2c1c2.rou.xml",
         use_gui=False,
