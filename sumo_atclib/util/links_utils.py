@@ -1,7 +1,7 @@
 """Module with functions for work with generalized_edge."""
 from sumolib.net.edge import Edge
 
-from sumo_rl.environment.edge import Link
+from sumo_atclib.environment.edge import Link
 
 
 def is_not_TLS(connections):

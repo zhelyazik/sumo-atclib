@@ -1,6 +1,6 @@
 """Import all the necessary modules for the sumo_rl package."""
 
-from sumo_rl.environment.env import (
+from sumo_atclib.environment.env import (
     StateObserver,
     SumoEnvironment,
     TrafficLightsScheduleController,
@@ -16,4 +16,4 @@ from sumo_rl.environment.env import (
 #     ingolstadt7,
 #     ingolstadt21,
 # )
-from sumo_rl.util.links_utils import make_links
+from sumo_atclib.util.links_utils import make_links

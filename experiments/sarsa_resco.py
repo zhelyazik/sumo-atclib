@@ -12,7 +12,7 @@ else:
 
 from linear_rl.true_online_sarsa import TrueOnlineSarsaLambda
 
-from sumo_rl import cologne8
+from sumo_atclib import cologne8
 
 
 def run(use_gui=False, episodes=50):

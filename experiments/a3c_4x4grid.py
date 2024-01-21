@@ -17,7 +17,7 @@ from ray.rllib.agents.a3c.a3c_tf_policy import A3CTFPolicy
 from ray.rllib.env import PettingZooEnv
 from ray.tune.registry import register_env
 
-import sumo_rl
+import sumo_atclib
 
 
 if __name__ == "__main__":
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     register_env(
         "4x4grid",
         lambda _: PettingZooEnv(
-            sumo_rl.env(
+            sumo_atclib.env(
                 net_file="nets/4x4-Lucas/4x4.net.xml",
                 route_file="nets/4x4-Lucas/4x4c1c2c1c2.rou.xml",
                 out_csv_name="outputs/4x4grid/a3c",

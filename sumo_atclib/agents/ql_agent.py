@@ -1,5 +1,5 @@
 """Q-learning Agent class."""
-from sumo_rl.exploration.epsilon_greedy import EpsilonGreedy
+from sumo_atclib.exploration.epsilon_greedy import EpsilonGreedy
 
 
 class QLAgent:
